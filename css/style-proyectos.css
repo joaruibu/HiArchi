@@ -1,0 +1,1094 @@
+            /* ----- Generales -----*/
+
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                max-width: 1920px;
+                margin: 0 auto;
+                background-color: #EDF0F2;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+          
+
+            /* ----- Header -----*/
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100vw;
+                padding: 2% 4% 0px 2%;
+                position: fixed;
+                top: 5px;
+                z-index: 1;
+                height: 10vh;
+            }
+
+            /* ----- Header-home -----*/
+
+            .navbar-home {
+                height: 60px;
+                width: 10%;
+                color: #0F4C81;
+                font-family: 'Fahkwang', sans-serif;
+                font-size: calc(1.5vw + 10%);
+                position: relative;
+                /* margin: 20px; */
+                text-align: left;
+            }
+
+            .name {
+                font-weight: 700;
+                margin-bottom: 0;
+                margin: 0;
+                height: 100%;
+            }
+
+            /* ----- Header-menu -----*/
+
+            .navbar-menu {
+                max-width: 48px;
+                max-height: 48px;
+                width: 48px;
+                height: 48px;
+                padding: 12px 2px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                z-index: 100;
+                position: fixed;
+                top: 2rem;
+                right: 2rem;
+                overflow: hidden;
+            }
+
+            .line {
+                width: 100%;
+                height: 4px;
+                background-color: #0F4C81;
+                border: 0;
+                margin: 0;
+                position: relative;
+                left: 0px;
+                transition: all .3s ease-in-out
+            }
+
+
+
+
+            .moveLine{
+                left: 15px;
+                transition: all .3s ease-in-out
+                
+            }
+            
+            
+            
+            
+            /* Animación en js cuando desplegamos el menu */
+            
+            main{
+                /* opacity: 0;
+                transition: all .3s ease-in-out;  
+                display: none; */
+                
+            }
+            
+            
+            /* menu */
+            
+            .menu-open{
+                background-color: #0F4C81;
+                height: 100vh;
+                max-height: 1080px;
+                width: 40vw;
+                position: absolute;
+                top: -5px;
+                right: -90vw;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
+                opacity: 0;
+                visibility: hidden;
+                padding: 25% 5%;
+                border-radius: 5% 0 0 5%;
+                
+                /* ⚠️ */
+                transition: all .5s ease-in-out;
+            }
+            
+            .mostrar{
+                opacity: 1;
+                visibility: visible;
+                right:0vw;
+            }
+            
+            .blueColor{
+                background-color: #EDF0F2;
+            }
+            
+            .degradado{
+                opacity: 0.1 !important;
+            }
+            
+            .menu-open__element{
+                list-style-type: none;
+                font-family: 'Fahkwang', sans-serif;
+                font-size: 5vw ;
+                font-weight: 600;
+                margin: 5%;
+                
+               
+            }
+            
+            .border--blue {
+                color: #EDF0F2;
+                position: relative;
+                top: -2vw;
+                transition: color 0.5s;
+                
+            }
+            
+            .border--blue:hover{
+                -webkit-text-stroke: 2px #EDF0F2;
+                color: #0F4C81;
+                 
+            }
+            
+            .selected{
+                text-decoration: underline;
+                pointer-events: none;
+            }
+
+
+
+
+
+
+            /* ----- Portada Proyecto-----*/
+
+            .portada {
+                height: 100%;
+                display: flex;
+                margin: 0 auto;
+                width: 80%;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .portada__textos {
+                color: #0F4C81;
+                font-family: 'Prompt', sans-serif;
+                flex-basis: 35%;
+                display: flex;
+                text-align: left;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            .portada__textos__titulo {
+                font-size: 6.5vw;
+                margin-top: 30vh;
+                margin-bottom: 5vh;
+            }
+
+            .portada__textos__parrafo {
+                font-weight: 300;
+                font-size: 1vw;
+            }
+
+            .portada__imagen {
+                /* height: 100%; */
+             
+            }
+
+            .portada__imagen__dispositivos {
+                height: auto; 
+                max-height: 100vh;
+                max-width: 100%;
+                position: relative;
+                left: 40px;
+            }
+
+            /* ----- Explicación texto-----*/
+
+            .textoExplicacion {
+                color: #0F4C81;
+                font-family: 'Prompt', sans-serif;
+                width: 80%;
+                margin: 10% auto;
+                margin-bottom: 15%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                background-color: #EDF0F2;
+            }
+
+            .tituloExplicacion {
+                font-weight: 200;
+                font-size: 2.2vw;
+            }
+
+            .textoExplicacion__problema, .textoExplicacion__solucion {
+                margin-right: 15%;
+                flex-basis: 40%;
+            }
+
+            .textoExplicacion__funciones {
+                flex-basis: 30%;
+            }
+
+            .parrfoExplicacion {
+                font-size: 1vw;
+                font-weight: 300;
+            }
+
+            .funciones__lista {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            /* ----- Detalle completo-----*/
+
+            .detallecompleto {
+                height: 60vw;
+                width: 80%;
+                margin: 8vw auto;
+            }
+
+            /* ----- Detalle completo__texto-----*/
+
+            .detallecompleto__texto {
+                display: flex;
+                color: #0F4C81;
+                font-family: 'Prompt', sans-serif;
+                width: 100%;
+                margin: 8vh auto;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+
+            .detallecompleto__texto__titulo {
+                flex-basis: 45%;
+                font-size: 2vw;
+                margin: 0;
+            }
+
+            .detallecompleto__texto__parrafo {
+                flex-basis: 40%;
+                font-size: 1vw;
+                margin: 0;
+                font-weight: 300;
+            }
+
+            /* ----- Detalle completo__imagen-----*/
+
+            .detallecompleto__fondo {
+                width: 100%;
+                height: 60%;
+                background-color: #0F4C81;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .detallecompleto__fondo__gif {
+                width: 70%;
+            }
+
+            /* ----- Detalle parcial-----*/
+
+            .detalleparcial {
+
+
+                height: 40vw;
+                width: 80%;
+                margin: 8vw auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            /* ----- Detalle parcial__texto-----*/
+
+            .detalleparcial__texto {
+                display: flex;
+                flex-direction: column;
+                color: #0F4C81;
+                font-family: 'Prompt', sans-serif;
+                width: 30%;
+                height: 25%;
+                justify-content: center;
+            }
+
+            .textoDcha {
+                text-align: right;
+            }
+
+            .detalleparcial__texto__titulo {
+                font-size: 2vw;
+                margin: 0;
+                margin-bottom: 10%;
+                line-height: 120%;
+            }
+
+            .detalleparcial__texto__parrafo {
+                font-size: 0.9vw;
+                margin: 0;
+                font-weight: 300;
+            }
+
+            /* ----- Detalle parcial__imagen-----*/
+
+            .detalleparcial__fondo {
+                width: 60%;
+                height: 90%;
+                background-color: #0F4C81;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .detalleparcial__fondo__gif {
+                width: 85%;
+                height: auto;
+            
+            }
+           
+
+            .animationOpacity{
+                position: absolute;
+                width: 41%;
+                height: auto;
+            }
+
+            /* Animación usuarios target */
+
+            .animation1{
+                animation-name: user1;
+                animation-duration: 16s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-delay: 0s;
+            }
+
+            @keyframes user1{
+                0%{
+                   opacity: 1;  
+                 }
+                10%{
+                    opacity: 1;  
+                }
+                45%{
+                    opacity: 1;
+                }
+                50%{
+                    opacity: 0;
+                }
+            
+                95%{
+                    opacity: 0;  
+                }
+            } 
+
+            .animation2{
+               
+                animation-name: user2;
+                animation-duration: 16s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-delay: 8s;
+             }
+             
+              @keyframes user2{
+                0%{
+                    opacity: 1;  
+                  }
+                 10%{
+                     opacity: 1;  
+                 }
+                 45%{
+                     opacity: 1;
+                 }
+                 50%{
+                     opacity: 0;
+                 }
+             
+                 95%{
+                     opacity: 0;  
+                 }
+            }  
+
+/* Animación inclusivos el/ella */
+
+
+            .inclusivo1{
+                animation-name: inclusivo1;
+                animation-duration: 12s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-delay: 0s;
+            }
+
+            @keyframes inclusivo1{
+                0%{
+                   opacity: 1;  
+                 }
+                10%{
+                    opacity: 1;  
+                }
+                30%{
+                    opacity: 1;
+                }
+                33%{
+                    opacity: 0;
+                }
+            
+                95%{
+                    opacity: 0;  
+                }
+            } 
+
+            .inclusivo2{
+               
+                animation-name: inclusivo2;
+                animation-duration: 12s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-delay: 4s;
+             }
+             
+              @keyframes inclusivo2{
+                0%{
+                    opacity: 1;  
+                  }
+                 10%{
+                     opacity: 1;  
+                 }
+                 30%{
+                     opacity: 1;
+                 }
+                 33%{
+                     opacity: 0;
+                 }
+             
+                 95%{
+                     opacity: 0;  
+                 }
+            }  
+
+
+            .inclusivo3{
+               
+                animation-name: inclusivo3;
+                animation-duration: 12s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-delay: 8s;
+             }
+             
+              @keyframes inclusivo3{
+                0%{
+                    opacity: 1;  
+                  }
+                 10%{
+                     opacity: 1;  
+                 }
+                 30%{
+                     opacity: 1;
+                 }
+                 33%{
+                     opacity: 0;
+                 }
+             
+                 95%{
+                     opacity: 0;  
+                 }
+            }  
+    
+
+
+
+            /* ----- Detalle parcial izquierda-----*/
+
+            .detalleIzq {
+                flex-direction: row-reverse;
+            }
+
+            .textoIzq {
+                text-align: left;
+            }
+
+              /* ----- Detalle completo movil-----*/
+.mockup__movil{
+    width: 75%;
+    position: relative;
+    left: -40px;
+}
+
+.detalle6{
+    margin-bottom: 0px;
+}
+              
+    /* ----- Texto Cabecera Botones-----*/
+
+    .claimAbout {
+        font-family: 'Fahkwang', sans-serif;
+        font-size: 3.6vw;
+        color: #0F4C81;
+        text-align: left;
+        margin: 250px auto;
+        height: 15vw;
+        position: relative;
+        width: 75vw;
+    }
+    
+
+
+
+  /* ----- Boton Final-----*/
+
+  .botonesFinal{
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 15%;
+    font-family: 'Prompt', sans-serif;
+    
+}
+
+
+   .botonesFinal__elemento{
+    height: 65px;
+    width: 23vw;
+    min-width: 200px;
+    background-color:#0F4C81;
+    color: #EDF0F2;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.6vw;
+    font-weight: 400;
+    border-radius: 7px;
+    box-shadow: -10px 10px 50px #0000004d;
+    transition: all 0.3s linear;
+}
+
+.botonesFinal__elemento:hover{
+    background-color:#EDF0F2 ;
+    color: #0F4C81;
+    border: solid 2px #0F4C81;
+    /* background-color:rgb(216, 170, 3)  */
+
+   
+}
+
+
+
+ /* ----- Textos legales-----*/
+ .legal__terminos{
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.6vw;
+    color: #0F4C81;
+    text-align: center;
+    margin: 0px auto;
+    height: 2vw;
+    position: relative;
+    width: 75vw;
+ }
+
+ .terminos__elemento{
+      font-weight: 200; 
+ }
+
+
+
+
+
+
+
+
+
+
+              /* ----- Media query-----*/ 
+
+
+@media only screen and (max-width: 1450px) {
+
+
+
+     .navbar-menu{
+
+        max-width: 48px;
+        max-height: 48px;
+        width: calc(2.4vw + 5%);
+        height: 44px  ;
+
+    }
+
+
+    .navbar-home {
+        width: 10%;
+        font-size: calc(1.5vw + 15%);
+        /* margin: 20px; */
+        margin-top: 3%;
+    }
+
+
+
+    .portada__textos__parrafo,.detalleparcial__texto__parrafo, .parrfoExplicacion {
+      
+        font-size: calc(1vw + 10%);
+    }
+
+
+    .portada__textos__titulo {
+      
+        margin-top: 20vh;
+       
+    }
+    .detalleparcial__texto__titulo{
+        margin-bottom: 10%;
+    }
+
+    .detallecompleto{
+        max-height: 70%;
+    }
+    .detalleparcial__fondo{
+        max-height: 50vh;
+    }
+
+  }
+
+
+
+  @media only screen and (max-width: 1100px) {
+
+   
+     .line{
+        width: 100%;
+        height: 2px;
+       
+    }
+
+    .portada__imagen__dispositivos{
+        width: 95%;
+    }
+
+    .navbar-home {
+     
+        margin-top: 3%;
+        font-size: calc(1.5vw + 15%);
+       
+        
+       
+    }
+
+
+
+  }
+
+
+
+
+
+
+  @media only screen and (max-width: 950px){
+
+    .portada__imagen {
+       overflow: hidden;
+     
+    }
+
+
+    .navbar-home {
+        font-size:2.5vw ;
+    }
+    
+    .navbar-menu{
+       
+        width: 40px;
+        height: 40px;
+      
+      
+
+    }
+
+    .line{
+        width: 100%;
+        height: 2px;
+       
+        
+    }
+
+
+    .navbar-home {
+     
+        margin-top: 3%;
+        font-size: calc(2vw + 20%);
+       
+        
+       
+    }
+
+    .name{
+        margin-top: 5%;
+    }
+
+
+
+
+    .portada__imagen__dispositivos{
+        width: 90%;
+    }
+
+
+    .portada__textos__parrafo,.detalleparcial__texto__parrafo, .parrfoExplicacion {
+      
+        font-size: calc(1vw + 15%);
+    }
+
+  .mockup__movil{
+      left: -20px;
+  }
+
+
+ /* ----- Boton Final-----*/
+ .botonesFinal__elemento{
+    width: 20vw;
+    font-size: 1.9vw;
+}
+
+
+
+  }
+
+
+
+
+
+  @media only screen and (max-width: 600px){
+
+ /* ----- Portada Proyecto-----*/
+
+ .navbar-home {
+    margin-top: 3%;
+    font-size: calc(3vw + 20%);
+   
+}
+
+.navbar-menu{
+       
+    width: 36px;
+    height: 40px;
+  
+  
+
+}
+
+.name{
+    margin-top: 6%;
+}
+
+
+.line{
+    width: 100%;
+    height: 2px;
+   
+    
+}
+
+
+
+
+
+
+ .portada {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 70%;
+    
+}
+
+.portada__textos {
+    color: #0F4C81;
+    font-family: 'Prompt', sans-serif;
+    flex-basis: 0%;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    order: 2;
+}
+
+.portada__textos__titulo {
+    font-size: 6.5vw;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+.portada__textos__parrafo {
+    font-size: calc(2vw + 5%);
+    width: 80%;
+}
+
+.portada__imagen {
+    /* height: 60%; */
+ 
+}
+
+.portada__imagen__dispositivos {
+    height: auto; 
+    max-height: 100vh;
+    max-width: 100%;
+  left: 0;
+  width: 100%;
+}
+
+
+
+
+  /* ----- Explicación texto-----*/
+
+  .textoExplicacion {
+    
+    width: 70%;
+    margin: 10% auto;
+    margin-bottom: 15%;
+    display: block;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #EDF0F2;
+}
+
+.tituloExplicacion {
+    font-weight: 200;
+    font-size: 4.4vw;
+}
+
+.textoExplicacion__problema, .textoExplicacion__solucion {
+    margin-right: 15%;
+    flex-basis: 40%;
+    margin-top: 10%;
+}
+
+.textoExplicacion__solucion{
+    text-align: right;
+    margin-right: 0%;
+
+}
+
+.textoExplicacion__funciones{
+    
+    margin-top: 10%;
+
+}
+
+.parrfoExplicacion {
+    font-size: calc(2vw + 5%);
+   
+}
+
+.funciones__lista {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+   /* ----- Detalle completo__imagen-----*/
+ .detallecompleto{
+  /* margin: 8vw auto; */
+  width: 70%; 
+  margin-bottom: 35vw;
+}
+
+.detalleparcial__fondo__gif {
+    width: 60%;
+}
+
+
+.detallecompleto__fondo__gif {
+    width: 85%;
+}
+
+.detallecompleto__fondo {
+    margin-top: 5vw;
+   
+} 
+
+
+
+
+/* ----- Detalle completo__texto-----*/
+    .detallecompleto__texto, .detalleparcial__texto {
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.detallecompleto__texto__titulo, .detalleparcial__texto__titulo {
+    
+    font-size: 3.4vw;
+    margin: 0;
+    margin-bottom: 2vw;
+}
+
+.detallecompleto__texto__parrafo, .detalleparcial__texto__parrafo {
+    
+    font-size: calc(2vw + 5%);
+    margin: 0;
+    font-weight: 300;
+} 
+
+
+
+
+  /* ----- Detalle parcial-----*/
+
+  .detalleparcial {
+
+
+    height: 40vw;
+    width: 70%;
+    margin-bottom: 35vw;
+    display: block;
+
+}
+
+/* ----- Detalle parcial__texto-----*/
+
+
+/* 
+.textoDcha {
+    text-align: right;
+    margin-right: 0;
+}
+.textoIzq{
+    text-align: left;
+    margin-left: 0;
+} */
+
+
+
+
+/* ----- Detalle parcial__imagen-----*/
+
+.detalleparcial__fondo{
+
+    width: 100%;
+    height: 100%;
+    background-color: #0F4C81;
+    margin-top: 12vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mockup__movil{
+    left: -10px;
+}
+
+
+.extraMargin{
+
+    margin-top: 20px;
+ }
+
+
+ /* ----- Boton Final-----*/
+
+
+ .botonesFinal{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.botonesFinal__elemento{
+    margin: 5% 0 ;
+    font-size: 4vw;
+    height: 50px;
+}
+.mostrar {
+    right: -10vw;
+}
+.menu-open {
+    width: 52vw;
+}
+
+
+}
+
+@media only screen and (max-width: 450px) {
+
+
+ 
+
+
+        .navbar-home {
+     
+            top: 0.5rem;
+            font-size: calc(4.5vw + 10%);
+            padding: 2% 4% 0px 3%;
+            
+           
+        }
+        
+        .name{
+            margin-top: 20%;
+        }
+    
+        .line{
+            width: 100%;
+            height: 2px;
+           
+            
+        }
+
+        .navbar-menu{
+            width: 32px;
+            height: 36px;
+            right: 1rem;
+        }
+
+        .claimAbout{
+            margin: 175px auto;
+        }
+    
+        .legal__terminos {
+            font-size: 2.5vw;
+        }
+
+      
+        .menu-open {
+            width: 65vw;
+            padding: 50% 5%;
+        }
+
+
+    }

@@ -1,0 +1,646 @@
+            /* ----- Generales -----*/
+
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                max-width: 1920px;
+                margin: 0 auto;
+                background-color: #0F4C81;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .visible {
+                opacity: 1;
+            }
+
+            .invisible {
+                opacity: 0;
+            }
+
+            .opacidad {
+                transition: all 1s ease-in-out;
+            }
+
+
+            .navbarReady{   
+                opacity: 1 !important;
+                display: flex !important;
+            
+            }
+
+
+            .mainReady{
+                opacity: 1 !important;
+                display: block !important;
+            }
+
+            .animationNone{
+                opacity: 0;
+                display: none !important;
+            }
+            /* ----- Animación cargar pagina -----*/
+
+            .animation {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 100vh;
+                flex-wrap: nowrap;
+            }
+
+            .animation__line {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                color: #EDF0F2;
+                opacity: 0;
+            }
+
+            .animation__line h6 {
+                color: #EDF0F2;
+                font-family: 'Fahkwang', sans-serif;
+                font-size: 3.2vw;
+                font-weight: 800;
+                margin: 0.1% 2%;
+                display: inline;
+            }
+
+            .borderAnimation {
+                -webkit-text-stroke: 2px #EDF0F2;
+                color: #0F4C81;
+            }
+
+            /* ----- Header -----*/
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100vw;
+                padding: 2% 4% 0px 2%;
+                position: fixed;
+                top: 5px;
+                z-index: 1;
+                height: 10vh;
+                display: none;
+                opacity: 0;
+                transition: all .3s ease-in-out
+            }
+
+            /* ----- Header-home -----*/
+
+            .navbar-home {
+                height: 60px;
+                width: 10%;
+                color: #EDF0F2;
+                font-family: 'Fahkwang', sans-serif;
+                font-size: calc(1.5vw + 10%);
+                position: relative;
+                /* margin: 20px; */
+                text-align: left;
+            }
+
+            .name {
+                font-weight: 700;
+                margin-bottom: 0;
+                margin: 0;
+                height: 100%;
+            }
+
+            .surname {
+                font-weight: 100;
+                margin-top: 0;
+            }
+
+            /* .opacidad{
+                opacity: 0;
+            } */
+
+            /* ----- Header-menu -----*/
+
+            .navbar-menu {
+                max-width: 48px;
+                max-height: 48px;
+                width: 48px;
+                height: 48px;
+                padding: 12px 2px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                z-index: 100;
+                position: fixed;
+                top: 2rem;
+                right: 2rem;
+                overflow: hidden;
+            }
+
+            .line {
+                width: 100%;
+                height: 4px;
+                background-color: #EDF0F2;
+                border: 0;
+                margin: 0;
+                position: relative;
+                left: 0px;
+                transition: all .3s ease-in-out
+            }
+
+            .moveLine {
+                left: 15px;
+                transition: all .3s ease-in-out
+            }
+
+            /* Animación en js cuando desplegamos el menu */
+
+            main {
+                opacity: 0;
+                transition: all .3s ease-in-out;
+                display: none;
+            }
+
+            /* menu */
+
+            .menu-open {
+                background-color: #EDF0F2;
+                height: 100vh;
+                max-height: 1080px;
+                width: 40vw;
+                position: absolute;
+                top: -5px;
+                right: -90vw;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
+                opacity: 0;
+                visibility: hidden;
+                padding: 25% 5%;
+                border-radius: 5% 0 0 5%;
+                /* ⚠️ */
+                transition: all .5s ease-in-out;
+            }
+
+            .mostrar {
+                opacity: 1;
+                visibility: visible;
+                right: 0vw;
+            }
+
+            .blueColor {
+                background-color: #0F4C81;
+            }
+
+            .degradado {
+                opacity: 0.1 !important;
+            }
+
+            .menu-open__element {
+                list-style-type: none;
+                font-family: 'Fahkwang', sans-serif;
+                font-size: 5vw;
+                font-weight: 600;
+                margin: 5%;
+            }
+
+            .border--blue {
+                color: #0F4C81;
+                position: relative;
+                top: -2vw;
+                transition: color 0.5s;
+            }
+
+            .border--blue:hover {
+                -webkit-text-stroke: 2px #0F4C81;
+                color: #EDF0F2;
+            }
+
+            .selected {
+                text-decoration: underline;
+                pointer-events: none;
+            }
+
+            /* cierre menu */
+
+            /* ----- Texto principal -----*/
+
+            .portada {
+                height: 100vh;
+                display: flex;
+                width: 100VW;
+                margin-bottom: 45vw;
+            }
+
+            .textoPrincipal {
+                font-family: 'Fahkwang', sans-serif;
+                color: #EDF0F2;
+                text-align: right;
+                margin-right: 13vw;
+                margin-top: 3vw;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                z-index: 0;
+                /* display: none; */
+            }
+
+            .textoPrincipal__ux {
+                margin: 0;
+                margin-top: 7vw;
+                opacity: 1;
+            }
+
+            .textoPrincipal__front {
+                margin: 0;
+                margin-top: 4vw;
+            }
+
+            .textoPrincipal__ux, .textoPrincipal__front {
+                font-size: 6.5vw;
+            }
+
+            .border {
+                -webkit-text-stroke: 2px #EDF0F2;
+                color: #0F4C81;
+                position: relative;
+                top: -2vw;
+            }
+
+            /* ----- Texto Selected Works-----*/
+
+            .selectWork-text {
+                font-family: 'Fahkwang', sans-serif;
+                color: #EDF0F2;
+                width: 80%;
+                font-size: 4.5vw;
+                margin-left: 10.5rem;
+                margin-top: 15.5rem;
+                text-align: left;
+                opacity: 0;
+                position: absolute;
+                top: 40vw;
+            }
+
+            /* ----- Proyecto 1-----*/
+
+            .proyecto {
+                width: 75vw;
+                height: 500px;
+                margin: 250px auto;
+                background-color: #EDF0F2;
+                border-radius: 20px;
+                box-shadow: -10px 10px 50px #0000004d;
+                display: flex;
+                cursor: pointer;
+                border: 0px;
+                transition: width 0.5s;
+                padding: 0;
+            }
+
+            .proyecto:hover {
+                width: 77%;
+            }
+
+            /* ----- Proyectos __imagen-----*/
+
+            .proyecto__imagen {
+                height: 100%;
+                width: 100%;
+                background-position: left bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: local;
+                border-radius: 0px 0px 20px 0px;
+            }
+
+            .imgProyecto1 {
+                background-image: url("../img/home/proyecto1@2x.png");
+            }
+
+            .imgProyecto2 {
+                background-image: url("../img/home/proyecto2@2x.png");
+            }
+
+            .imgProyecto3 {
+                background-image: url("../img/home/proyecto3@2x.png");
+            }
+
+            /* ----- Proyecto__texto-----*/
+
+            .proyecto__textos {
+                color: #0F4C81;
+                font-family: 'Prompt', sans-serif;
+                margin: 7% 5%;
+                width: 65%;
+                max-width: 510px;
+                text-align: left;
+            }
+
+            .proyectoTexto__funciones {
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            .proyectoTexto__titulo {
+                font-weight: 700;
+                font-size: 50px;
+                letter-spacing: 2px;
+            }
+
+            .proyectoTexto__parrafo {
+                font-weight: 300;
+                font-size: 16px;
+            }
+
+            /* ----- Texto Cabecera Botones-----*/
+
+            .claimAbout {
+                font-family: 'Fahkwang', sans-serif;
+                font-size: 3.6vw;
+                color: #EDF0F2;
+                text-align: left;
+                margin: 250px auto;
+                height: 18vw;
+                position: relative;
+                width: 75vw;
+            }
+
+            /* ----- Boton Final-----*/
+
+            .botonesFinal {
+                display: flex;
+                justify-content: space-between;
+                padding: 2% 15%;
+                font-family: 'Prompt', sans-serif;
+            }
+
+            .botonesFinal__elemento {
+                height: 65px;
+                width: 23vw;
+                min-width: 200px;
+                background-color: #EDF0F2;
+                display: inline-block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #0F4C81;
+                font-family: 'Prompt', sans-serif;
+                font-size: 1.6vw;
+                font-weight: 400;
+                border-radius: 7px;
+                box-shadow: -10px 10px 50px #0000004d;
+                transition: all 0.3s linear;
+            }
+
+            .botonesFinal__elemento:hover {
+                background-color: #0F4C81;
+                color: #EDF0F2;
+                border: solid 2px #EDF0F2;
+                /* background-color:rgb(216, 170, 3)  */
+            }
+
+            /* ----- Textos legales-----*/
+
+            .legal__terminos {
+                font-family: 'Prompt', sans-serif;
+                font-size: 1.6vw;
+                color: #EDF0F2;
+                text-align: center;
+                margin: 0px auto;
+                height: 2vw;
+                position: relative;
+                width: 75vw;
+            }
+
+            .terminos__elemento {
+                font-weight: 200;
+            }
+
+            .disable {
+                /* cursor: default;
+    pointer-events: none; */
+            }
+
+            /* ----- Media query-----*/
+
+            @media only screen and (max-width: 1450px) {
+                .textoPrincipal {
+                    margin-top: calc(9vw + 60px);
+                    margin-right: calc(14vw + 4%);
+                }
+                .navbar-home {
+                    width: 10%;
+                    font-size: calc(1.5vw + 15%);
+                    /* margin: 20px; */
+                    margin-top: 3%;
+                }
+                .navbar-menu {
+                    max-width: 48px;
+                    max-height: 48px;
+                    width: calc(2.4vw + 5%);
+                    height: 44px;
+                }
+                .selectWork-text {
+                    top: 50vw;
+                }
+                .proyecto {
+                    height: 350px;
+                    align-items: center;
+                }
+                .proyecto__textos {
+                    margin: 7% 3%;
+                }
+                .proyectoTexto__titulo {
+                    margin: 25px 0px;
+                    font-size: 40px;
+                }
+                .proyecto__imagen {
+                    height: 100%;
+                    width: 100%;
+                    background-position: left bottom;
+                }
+               
+            }
+
+            @media only screen and (max-width: 1100px) {
+                .textoPrincipal {
+                    margin-top: calc(9vw + 160px);
+                    margin-right: calc(14vw + 6%);
+                }
+                .line {
+                    width: 100%;
+                    height: 2px;
+                }
+                .navbar-home {
+                    margin-top: 3%;
+                    font-size: calc(1.5vw + 15%);
+                }
+             
+            }
+
+            @media only screen and (max-width: 950px) {
+                .proyecto {
+                    height: 100%;
+                    flex-direction: column;
+                    padding: 0 5%;
+                    margin-bottom: 20vw;
+                    margin-top: 10vw;
+                }
+                .navbar-menu {
+                    width: 40px;
+                    height: 40px;
+                }
+                .line {
+                    width: 100%;
+                    height: 2px;
+                }
+                .navbar-home {
+                    margin-top: 3%;
+                    font-size: calc(2vw + 20%);
+                }
+                .name {
+                    margin-top: 5%;
+                }
+                .selectWork-text {
+                    top: 60vw;
+                }
+                .proyecto__imagen {
+                    order: -1;
+                    width: 100%;
+                    height: 40vw;
+                    background-position: center;
+                    background-size: contain;
+                    border-radius: 20px 20px 0px 0px;
+                }
+                /* ----- Proyecto__texto-----*/
+                .proyecto__textos {
+                    margin: 7% 0%;
+                    width: 85%;
+                    text-align: left;
+                }
+                .proyectoTexto__funciones {
+                    font-weight: 500;
+                    font-size: 12px;
+                }
+                .proyectoTexto__titulo {
+                    font-weight: 700;
+                    font-size: 35px;
+                    letter-spacing: 2px;
+                }
+                .proyectoTexto__parrafo {
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+                /* ----- Boton Final-----*/
+                .botonesFinal__elemento {
+                    width: 20vw;
+                    font-size: 1.9vw;
+                }
+               
+            }
+
+        
+
+            @media only screen and (max-width: 600px) {
+                .navbar-menu {
+                    width: 36px;
+                    height: 40px;
+                }
+                .navbar-home {
+                    margin-top: 3%;
+                    font-size: calc(3vw + 20%);
+                }
+                .name {
+                    margin-top: 6%;
+                }
+                /* ----- Boton Final-----*/
+                .botonesFinal {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .botonesFinal__elemento {
+                    margin: 5% 0;
+                    font-size: 4vw;
+                    height: 50px;
+                }
+                .mostrar {
+                    right: -10vw;
+                }
+                .menu-open {
+                    width: 52vw;
+                }
+            }
+
+            @media only screen and (max-width: 450px) {
+                .textoPrincipal__ux, .textoPrincipal__front {
+                    font-size: 7.5vw;
+                }
+                .border, .borderAnimation {
+                    -webkit-text-stroke: 1px #EDF0F2;
+                    ;
+                }
+                .selectWork-text {
+                    display: none;
+                    opacity: 0;
+                }
+                .navbar-home {
+                    top: 0.5rem;
+                    font-size: calc(4.5vw + 10%);
+                    padding: 2% 4% 0px 3%;
+                }
+                .name {
+                    margin-top: 20%;
+                }
+                .line {
+                    width: 100%;
+                    height: 2px;
+                }
+                .navbar-menu {
+                    width: 32px;
+                    height: 36px;
+                    right: 1rem;
+                }
+                .proyecto {
+                    margin-bottom: 20vw;
+                    margin-top: 10vw;
+                    width: 70vw;
+                }
+                .proyectoTexto__funciones {
+                    font-weight: 500;
+                    font-size: 9px;
+                }
+                .proyectoTexto__titulo {
+                    font-weight: 700;
+                    font-size: 24px;
+                    letter-spacing: 2px;
+                }
+                .proyectoTexto__parrafo {
+                    font-weight: 300;
+                    font-size: 10px;
+                }
+                .claimAbout {
+                    margin: 175px auto;
+                }
+                .legal__terminos {
+                    font-size: 2.5vw;
+                }
+
+              
+                .menu-open {
+                    width: 65vw;
+                    padding: 50% 5%;
+                }
+            }
